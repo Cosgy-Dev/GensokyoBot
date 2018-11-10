@@ -1,25 +1,21 @@
 # GensokyoBot
-This bot is a fork of FredBoat. Most features of FredBoat have been removed or replaced in favour of offering streaming from a single source.
-The bot is optimized in such a way that only one stream is opened to the source.
+このボットはFredBoatのフォークです。 FredBoatのほとんどの機能は、単一のソースからストリーミングを提供するために削除または置換されています。
+ボットは、ソースに対して1つのストリームだけが開かれるように最適化されています。
 
 ```md
-< Music Commands >
+< 音楽コマンド >
 ,,join
-#Joins your voice chat and begin playing.
+#ボイスチャットに参加してプレイを開始します。
 ,,leave
-#Leaves the voice chat, stopping the music
+#音声チャットを終了し、音楽を停止します。
 ,,np
-#Shows the song currently playing in a nice embed
+#素敵な埋め込みで現在再生中の曲を表示します
 ,,stats
-#Displays stats about this bot
+#このボットに関する統計情報を表示します。
 ,,help
-#Displays this help message
+#このヘルプメッセージを表示します。
 
-
-Invite this bot: https://discordapp.com/oauth2/authorize?&client_id=302857939910131712&scope=bot
-Source code: https://github.com/Frederikam/GensokyoBot
-
-Content provided by gensokyoradio.net.
-The GR logo is a trademark of Gensokyo Radio.
+コンテンツはgensokyoradio.netによって提供されています。
+GRロゴはGensokyo Radioの商標です。
 Gensokyo Radio is © LunarSpotlight.
 ```
