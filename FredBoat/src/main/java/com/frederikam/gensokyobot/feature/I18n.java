@@ -38,11 +38,11 @@ public class I18n {
 
     private static final Logger log = LoggerFactory.getLogger(I18n.class);
 
-    public static FredBoatLocale DEFAULT = new FredBoatLocale(new Locale("en","US"), "en_US", "English");
+    public static FredBoatLocale DEFAULT = new FredBoatLocale(new Locale("ja","JP"), "ja_JP", "Japan");
     public static final HashMap<String, FredBoatLocale> LANGS = new HashMap<>();
 
     public static void start() {
-        LANGS.put("en_US", DEFAULT);
+        LANGS.put("ja_JP", DEFAULT);
 
         log.info("Loaded " + LANGS.size() + " languages: " + LANGS);
     }

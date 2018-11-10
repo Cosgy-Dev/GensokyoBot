@@ -26,7 +26,7 @@ public class GensokyoInfoAgent extends Thread {
 
     @Override
     public void run() {
-        log.info("Started GensokyoInfoAgent");
+        log.info("\u0047\u0065\u006E\u0073\u006F\u006B\u0079\u006F\u0049\u006E\u0066\u006F\u0041\u0067\u0065\u006E\u0074\u3092\u958B\u59CB\u3057\u307E\u3057\u305F");
 
         //noinspection InfiniteLoopStatement
         while (true) {
@@ -34,11 +34,11 @@ public class GensokyoInfoAgent extends Thread {
                 fetch();
                 sleep(INTERVAL_MILLIS);
             } catch (Exception e) {
-                log.error("Caught an exception while fetching info!", e);
+                log.error("\u60C5\u5831\u3092\u53D6\u5F97\u4E2D\u306B\u4F8B\u5916\u304C\u767A\u751F\u3057\u307E\u3057\u305F\uFF01", e);
                 try {
                     sleep(1000);
                 } catch (InterruptedException e1) {
-                    log.error("Interrupted while sleeping after an exception in the agent", e);
+                    log.error("\u30A8\u30FC\u30B8\u30A7\u30F3\u30C8\u306E\u4F8B\u5916\u5F8C\u306B\u30B9\u30EA\u30FC\u30D7\u4E2D\u306B\u4E2D\u65AD\u3055\u308C\u307E\u3057\u305F", e);
                     break;
                 }
             }
@@ -60,7 +60,7 @@ public class GensokyoInfoAgent extends Thread {
                     shard.getJda().getPresence().setGame(Game.of(newSong));
                 }
 
-                log.info("Now playing " + newSong);
+                log.info("\u518D\u751F\u4E2D " + newSong);
             }
 
             lastSong = data.getJSONObject("SONGINFO").getString("TITLE");

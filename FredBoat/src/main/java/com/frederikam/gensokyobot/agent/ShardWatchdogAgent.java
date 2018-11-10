@@ -51,11 +51,11 @@ public class ShardWatchdogAgent extends Thread {
                 inspect();
                 sleep(INTERVAL_MILLIS);
             } catch (Exception e) {
-                log.error("Caught an exception while trying kill dead shards!", e);
+                log.error("\u6B7B\u3093\u3060\u7834\u7247\u3092\u6BBA\u3059\u306E\u3092\u8A66\u307F\u3066\u3044\u308B\u9593\u306B\u4F8B\u5916\u3092\u6355\u307E\u3048\u305F\uFF01", e);
                 try {
                     sleep(1000);
                 } catch (InterruptedException e1) {
-                    log.error("Interrupted while sleeping after an exception in shard watchdog", e);
+                    log.error("\u30B7\u30E3\u30FC\u30C9\u30A6\u30A9\u30C3\u30C1\u30C9\u30C3\u30B0\u306E\u4F8B\u5916\u5F8C\u306B\u30B9\u30EA\u30FC\u30D7\u4E2D\u306B\u4E2D\u65AD", e);
                 }
             }
         }

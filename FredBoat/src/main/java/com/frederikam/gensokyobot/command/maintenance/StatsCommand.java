@@ -60,10 +60,10 @@ public class StatsCommand extends Command implements IMaintenanceCommand {
 
         str = str + "\n\n```";
 
-        str = str + "Reserved memory:                " + Runtime.getRuntime().totalMemory() / 1000000 + "MB\n";
-        str = str + "-> Of which is used:            " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1000000 + "MB\n";
-        str = str + "-> Of which is free:            " + Runtime.getRuntime().freeMemory() / 1000000 + "MB\n";
-        str = str + "Max reservable:                 " + Runtime.getRuntime().maxMemory() / 1000000 + "MB\n";
+        str = str + "\u4E88\u7D04\u30E1\u30E2\u30EA:                " + Runtime.getRuntime().totalMemory() / 1000000 + "MB\n";
+        str = str + "-> \u3069\u308C\u304C\u4F7F\u7528\u3055\u308C\u3066\u3044\u308B\u304B:            " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1000000 + "MB\n";
+        str = str + "-> \u3046\u3061\u306F\u30D5\u30EA\u30FC\u3067\u3059:            " + Runtime.getRuntime().freeMemory() / 1000000 + "MB\n";
+        str = str + "\u6700\u5927\u4E88\u7D04\u53EF\u80FD\uFF1A                " + Runtime.getRuntime().maxMemory() / 1000000 + "MB\n";
 
         str = str + "\n----------\n\n";
 

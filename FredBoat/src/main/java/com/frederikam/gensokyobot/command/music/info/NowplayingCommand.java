@@ -83,8 +83,8 @@ public class NowplayingCommand extends Command implements IMusicCommand {
                 .addField(I18n.get(channel.getGuild()).getString("listeners"), Integer.toString(data.getJSONObject("SERVERINFO").getInt("LISTENERS")), true)
                 .setImage(albumArt)
                 .setColor(new Color(66, 16, 80))
-                .setFooter("Content provided by gensokyoradio.net.\n" +
-                        "The GR logo is a trademark of Gensokyo Radio." +
+                .setFooter("\u30B3\u30F3\u30C6\u30F3\u30C4\u306F\u0067\u0065\u006E\u0073\u006F\u006B\u0079\u006F\u0072\u0061\u0064\u0069\u006F\u002E\u006E\u0065\u0074\u306B\u3088\u3063\u3066\u63D0\u4F9B\u3055\u308C\u3066\u3044\u307E\u3059\u3002\n" +
+                        "\u0047\u0052\u30ED\u30B4\u306F\u0047\u0065\u006E\u0073\u006F\u006B\u0079\u006F\u0020\u0052\u0061\u0064\u0069\u006F\u306E\u5546\u6A19\u3067\u3059\u3002" +
                         "\nGensokyo Radio is © LunarSpotlight.", null)
                 .build();
 
