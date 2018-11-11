@@ -48,7 +48,7 @@ public class LeaveCommand extends Command implements IMusicCommand {
             player.setCurrentTC(channel);
             player.leaveVoiceChannelRequest(channel, false);
         } catch (Exception e) {
-            log.error("Something caused us to not properly leave a voice channel!", e);
+            log.error("\u4f55\u304b\u304c\u79c1\u305f\u3061\u306b\u97f3\u58f0\u30c1\u30e3\u30cd\u30eb\u3092\u6b63\u3057\u304f\u6b8b\u3055\u306a\u3044\u3088\u3046\u306b\u3057\u307e\u3057\u305f\uff01", e);
             guild.getAudioManager().closeAudioConnection();
         }
     }

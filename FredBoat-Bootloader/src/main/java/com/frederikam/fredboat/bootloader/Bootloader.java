@@ -58,16 +58,16 @@ public class Bootloader {
             
             switch (process.exitValue()) {
                 case ExitCodes.EXIT_CODE_UPDATE:
-                    System.out.println("[BOOTLOADER] Now updating...");
+                    System.out.println("[BOOTLOADER] \u4eca\u66f4\u65b0\u4e2d...");
                     update();
                     break;
                 case 130:
                 case ExitCodes.EXIT_CODE_NORMAL:
-                    System.out.println("[BOOTLOADER] Now shutting down...");
+                    System.out.println("[BOOTLOADER] \u4eca\u30b7\u30e3\u30c3\u30c8\u30c0\u30a6\u30f3...");
                     break OUTER;
                     //SIGINT received or clean exit
                 default:
-                    System.out.println("[BOOTLOADER] Now restarting..");
+                    System.out.println("[BOOTLOADER] \u4eca\u518d\u8d77\u52d5\u3057\u307e\u3059..");
                     break;
             }
         }
@@ -83,7 +83,7 @@ public class Bootloader {
         lastBoot = System.currentTimeMillis();
         
         if(recentBoots >= 4){
-            System.out.println("[BOOTLOADER] Failed to restart 3 times, probably due to login errors. Exiting...");
+            System.out.println("[BOOTLOADER] \u304a\u305d\u3089\u304f\u30ed\u30b0\u30a4\u30f3\u30a8\u30e9\u30fc\u306e\u305f\u3081\u306b3\u56de\u518d\u8d77\u52d5\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002\u7d42\u4e86...");
             System.exit(-1);
         }
         
@@ -110,7 +110,7 @@ public class Bootloader {
 
         //Now clean up the workspace
         boolean deleted = new File("./update").delete();
-        System.out.println("[BOOTLOADER] Updated. Update dir deleted: " + deleted);
+        System.out.println("[BOOTLOADER] \u66f4\u65b0\u3057\u307e\u3057\u305f\u3002\u524a\u9664\u3055\u308c\u305f\u66f4\u65b0\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\uff1a " + deleted);
     }
 
 }

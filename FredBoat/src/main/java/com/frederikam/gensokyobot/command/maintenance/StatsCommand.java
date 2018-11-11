@@ -67,14 +67,14 @@ public class StatsCommand extends Command implements IMaintenanceCommand {
 
         str = str + "\n----------\n\n";
 
-        str = str + "Sharding:                       " + FredBoat.getInstance(guild.getJDA()).getShardInfo().getShardString() + "\n";
-        str = str + "Players playing:                " + PlayerRegistry.getPlayingPlayers().size() + "\n";
+        str = str + "\u30b7\u30e3\u30fc\u30c7\u30a3\u30f3\u30b0:                       " + FredBoat.getInstance(guild.getJDA()).getShardInfo().getShardString() + "\n";
+        str = str + "\u518d\u751f\u4e2d\u306e\u30d7\u30ec\u30a4\u30e4\u30fc:                " + PlayerRegistry.getPlayingPlayers().size() + "\n";
 
-        str = str + "Known servers:                  " + FredBoat.getAllGuilds().size() + "\n";
-        str = str + "Known users in servers:         " + FredBoat.getAllUsersAsMap().size() + "\n";
-        str = str + "Distribution:                   " + Config.CONFIG.getDistribution() + "\n";
-        str = str + "JDA responses total:            " + guild.getJDA().getResponseTotal() + "\n";
-        str = str + "JDA version:                    " + JDAInfo.VERSION;
+        str = str + "\u65e2\u77e5\u306e\u30b5\u30fc\u30d0\u30fc:                  " + FredBoat.getAllGuilds().size() + "\n";
+        str = str + "\u30b5\u30fc\u30d0\u30fc\u306e\u65e2\u77e5\u306e\u30e6\u30fc\u30b6\u30fc:         " + FredBoat.getAllUsersAsMap().size() + "\n";
+        str = str + "\u914d\u5e03:                  " + Config.CONFIG.getDistribution() + "\n";
+        str = str + "JDA\u306e\u56de\u7b54\u7dcf\u6570:            " + guild.getJDA().getResponseTotal() + "\n";
+        str = str + "JDA \u30d0\u30fc\u30b8\u30e7\u30f3:                    " + JDAInfo.VERSION;
 
         str = str + "```";
 

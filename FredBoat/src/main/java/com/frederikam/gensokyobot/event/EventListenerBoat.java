@@ -79,7 +79,7 @@ public class EventListenerBoat extends AbstractEventListener {
                 if(entry != null) {
                     invoked = entry.command;
                 } else {
-                    log.info("Unknown command:", cmdName);
+                    log.info("\u4e0d\u660e\u306a\u30b3\u30de\u30f3\u30c9\uff1a", cmdName);
                 }
             }
 

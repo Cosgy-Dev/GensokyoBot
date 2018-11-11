@@ -77,12 +77,12 @@ public class UpdateCommand extends Command implements ICommandOwnerRestricted {
         FileUtils.copyFile(homeJar, targetJar);
 
         //Shutdown for update
-        channel.sendMessage("Now restarting...").queue();
+        channel.sendMessage("\u518d\u8d77\u52d5\u3057\u3066\u3044\u307e\u3059\u3002").queue();
         FredBoat.shutdown(ExitCodes.EXIT_CODE_UPDATE);
     }
 
     @Override
     public String help(Guild guild) {
-        return "{0}{1} [branch [repo]]\n#Update the bot by checking out the provided branch from the provided github repo and compiling it. Default github repo is Frederikam, default branch is master. Restart with the fresh build.";
+        return "{0}{1} [branch [repo]]\n#\u63d0\u4f9b\u3055\u308c\u305fgithub\u30ea\u30dd\u30b8\u30c8\u30ea\u304b\u3089\u63d0\u4f9b\u3055\u308c\u305f\u30d6\u30e9\u30f3\u30c1\u3092\u30c1\u30a7\u30c3\u30af\u30a2\u30a6\u30c8\u3057\u3001\u30b3\u30f3\u30d1\u30a4\u30eb\u3059\u308b\u3053\u3068\u306b\u3088\u3063\u3066\u30dc\u30c3\u30c8\u3092\u66f4\u65b0\u3057\u307e\u3059\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u306egithub repo\u306fCosgy Dev\u3067\u3001\u30c7\u30d5\u30a9\u30eb\u30c8\u306e\u30d6\u30e9\u30f3\u30c1\u306fmaster\u3067\u3059\u3002\u65b0\u3057\u3044\u30d3\u30eb\u30c9\u3067\u518d\u8d77\u52d5\u3057\u307e\u3059\u3002";
     }
 }

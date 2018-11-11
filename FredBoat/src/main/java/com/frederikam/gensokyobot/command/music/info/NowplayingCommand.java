@@ -47,7 +47,7 @@ public class NowplayingCommand extends Command implements IMusicCommand {
     public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args) {
 
         if(!Config.CONFIG.getStreamUrl().equals(Config.GENSOKYO_RADIO_STREAM_URL)) {
-            channel.sendMessage("Info unavailable for this stream").queue();
+            channel.sendMessage("\u3053\u306e\u30b9\u30c8\u30ea\u30fc\u30e0\u306b\u306f\u60c5\u5831\u304c\u3042\u308a\u307e\u305b\u3093").queue();
             return;
         }
 

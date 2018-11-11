@@ -42,23 +42,23 @@ public class HelpCommand extends Command  {
 
     public static String getHelpMessage(JDA jda) {
         String out =  "```md\n" +
-                "< Music Commands >\n" +
-                ",,join\n" +
-                "#Joins your voice chat and begin playing.\n" +
-                ",,leave\n" +
-                "#Leaves the voice chat, stopping the music\n" +
-                ",,np\n" +
-                "#Shows the song currently playing in a nice embed\n" +
-                ",,stats\n" +
-                "#Displays stats about this bot\n" +
-                ",,help\n" +
-                "#Displays this help message\n" +
+                "< \u97f3\u697d\u30b3\u30de\u30f3\u30c9 >\n" +
+                "^join\n" +
+                "#\u30dc\u30a4\u30b9\u30c1\u30e3\u30c3\u30c8\u306b\u53c2\u52a0\u3057\u3066\u30d7\u30ec\u30a4\u3092\u958b\u59cb\u3057\u307e\u3059\u3002\n" +
+                "^leave\n" +
+                "#\u97f3\u58f0\u30c1\u30e3\u30c3\u30c8\u3092\u7d42\u4e86\u3057\u3001\u97f3\u697d\u3092\u505c\u6b62\u3057\u307e\u3059\u3002\n" +
+                "^np\n" +
+                "#\u7d20\u6575\u306a\u57cb\u3081\u8fbc\u307f\u3067\u73fe\u5728\u518d\u751f\u4e2d\u306e\u66f2\u3092\u8868\u793a\u3057\u307e\u3059\n" +
+                "^stats\n" +
+                "#\u3053\u306e\u30dc\u30c3\u30c8\u306b\u95a2\u3059\u308b\u7d71\u8a08\u60c5\u5831\u3092\u8868\u793a\u3057\u307e\u3059\u3002\n" +
+                "^help\n" +
+                "#\u3053\u306e\u30d8\u30eb\u30d7\u30e1\u30c3\u30bb\u30fc\u30b8\u3092\u8868\u793a\u3057\u307e\u3059\u3002\n" +
                 "\n\n" +
                 "Invite this bot: https://discordapp.com/oauth2/authorize?&client_id=" + jda.getSelfUser().getId() + "&scope=bot\n" +
-                "Source code: https://github.com/Frederikam/GensokyoBot\n\n{0}" +
+                "Source code: https://github.com/Cosgy-Dev/GensokyoBot\n\n{0}" +
                 "```";
 
-        out = out.replaceAll(",,", Config.CONFIG.getPrefix());
+        out = out.replaceAll("^", Config.CONFIG.getPrefix());
 
         if(Config.CONFIG.getStreamUrl().equals(Config.GENSOKYO_RADIO_STREAM_URL)) {
             out = out.replaceFirst("\\{0}", "Content provided by gensokyoradio.net.\nThe GR logo is a trademark of Gensokyo Radio.\nGensokyo Radio is © LunarSpotlight.\n");

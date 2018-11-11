@@ -65,7 +65,7 @@ public class EventLogger extends ListenerAdapter {
     public void onReady(ReadyEvent event) {
         jda = event.getJDA();
         send(new MessageBuilder()
-                .append("[:rocket:] Received ready event.")
+                .append("[:rocket:] \u53d7\u4fe1\u6e08\u307f\u306e\u6e96\u5099\u30a4\u30d9\u30f3\u30c8\u3002")
                 .build()
         );
     }
@@ -73,7 +73,7 @@ public class EventLogger extends ListenerAdapter {
     @Override
     public void onGuildJoin(GuildJoinEvent event) {
         send(
-                "[:white_check_mark:] Joined guild `" + event.getGuild() + "`. Users: `" + event.getGuild().getMembers().size() + "`."
+                "[:white_check_mark:] \u5165\u4f1a\u3057\u305f\u30ae\u30eb\u30c9\u306f\u3001 `" + event.getGuild() + "`\u3067\u3059\u3002 \u30e6\u30fc\u30b6\u30fc: `" + event.getGuild().getMembers().size() + "`"
         );
     }
 
@@ -87,9 +87,9 @@ public class EventLogger extends ListenerAdapter {
     private final Runnable ON_SHUTDOWN = () -> {
         Runtime rt = Runtime.getRuntime();
         if(FredBoat.shutdownCode != FredBoat.UNKNOWN_SHUTDOWN_CODE){
-            send("[:door:] Exiting with code " + FredBoat.shutdownCode + ".");
+            send("[:door:] \u7d42\u4e86\u30b3\u30fc\u30c9: " + FredBoat.shutdownCode + "");
         } else {
-            send("[:door:] Exiting with unknown code.");
+            send("[:door:] \u4e0d\u660e\u306a\u30b3\u30fc\u30c9\u3067\u7d42\u4e86\u3059\u308b\u3002");
         }
     };
 

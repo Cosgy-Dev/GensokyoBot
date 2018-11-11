@@ -78,7 +78,7 @@ public class TextUtils {
             return;
         }
 
-        log.error("Caught exception while executing a command", e);
+        log.error("\u30b3\u30de\u30f3\u30c9\u306e\u5b9f\u884c\u4e2d\u306b\u4f8b\u5916\u304c\u767a\u751f\u3059\u308b", e);
 
         MessageBuilder builder = new MessageBuilder();
 
@@ -181,7 +181,7 @@ public class TextUtils {
 
         switch(capturedGroups){
             case 0:
-                throw new IllegalStateException("Unable to match " + str);
+                throw new IllegalStateException(str + "\u30b3\u30de\u30f3\u30c9\u306e\u5b9f\u884c\u4e2d\u306b\u4f8b\u5916\u304c\u767a\u751f\u3059\u308b");
             case 1:
                 seconds = Integer.parseInt(m.group(1));
                 break;

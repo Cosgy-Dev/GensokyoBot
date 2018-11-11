@@ -79,7 +79,7 @@ public class CommandManager {
                     && !invoker.getUser().getId().equals("203330266461110272")//Cynth
                     && !invoker.getUser().getId().equals("81011298891993088")) {
                 message.delete().queue();
-                channel.sendMessage(invoker.getEffectiveName() + ": Please don't spam music commands outside of <#174821093633294338>.").queue(message1 -> {
+                channel.sendMessage(invoker.getEffectiveName() + ": <#174821093633294338> \u306e\u5916\u3067\u97f3\u697d\u30b3\u30de\u30f3\u30c9\u3092\u30b9\u30d1\u30e0\u3057\u306a\u3044\u3067\u304f\u3060\u3055\u3044").queue(message1 -> {
                     RestActionScheduler.schedule(
                             message1.delete(),
                             5,

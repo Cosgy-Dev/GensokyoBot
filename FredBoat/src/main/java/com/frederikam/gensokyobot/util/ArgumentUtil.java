@@ -57,12 +57,12 @@ public class ArgumentUtil {
 
         switch (list.size()) {
             case 0:
-                tc.sendMessage("No members found for `" + term + "`.").queue();
+                tc.sendMessage("`" + term + "`\u306e\u30e1\u30f3\u30d0\u30fc\u306f\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002").queue();
                 return null;
             case 1:
                 return list.get(0);
             default:
-                String msg = "Multiple users were found. Did you mean any of these users?\n```";
+                String msg = "\u8907\u6570\u306e\u30e6\u30fc\u30b6\u30fc\u304c\u898b\u3064\u304b\u308a\u307e\u3057\u305f\u3002\u3053\u308c\u3089\u306e\u30e6\u30fc\u30b6\u30fc\u306e\u3044\u305a\u308c\u304b\u3092\u610f\u5473\u3057\u307e\u3057\u305f\u304b\uff1f\n```";
 
                 for (int i = 0; i < 5; i++){
                     if(list.size() == i) break;

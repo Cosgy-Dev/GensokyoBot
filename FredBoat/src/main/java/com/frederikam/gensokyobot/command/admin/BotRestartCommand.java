@@ -44,7 +44,7 @@ public class BotRestartCommand extends Command implements ICommandOwnerRestricte
     @Override
     public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args) {
         try {
-            channel.sendMessage(TextUtils.prefaceWithName(invoker, " Restarting..")).complete(true);
+            channel.sendMessage(TextUtils.prefaceWithName(invoker, " \u518d\u8d77\u52d5\u4e2d..")).complete(true);
         } catch (RateLimitedException e) {
             log.warn("Rate limited", e);
         }
