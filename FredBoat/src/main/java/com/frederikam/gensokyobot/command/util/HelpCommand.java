@@ -54,14 +54,14 @@ public class HelpCommand extends Command  {
                 "^help\n" +
                 "#\u3053\u306e\u30d8\u30eb\u30d7\u30e1\u30c3\u30bb\u30fc\u30b8\u3092\u8868\u793a\u3057\u307e\u3059\u3002\n" +
                 "\n\n" +
-                "Invite this bot: https://discordapp.com/oauth2/authorize?&client_id=" + jda.getSelfUser().getId() + "&scope=bot\n" +
-                "Source code: https://github.com/Cosgy-Dev/GensokyoBot\n\n{0}" +
+                "\u3053\u306e\u30dc\u30c3\u30c8\u3092\u62db\u5f85: https://discordapp.com/oauth2/authorize?&client_id=" + jda.getSelfUser().getId() + "&scope=bot\n" +
+                "\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: https://github.com/Cosgy-Dev/GensokyoBot-jp\n\n{0}" +
                 "```";
 
         out = out.replaceAll("^", Config.CONFIG.getPrefix());
 
         if(Config.CONFIG.getStreamUrl().equals(Config.GENSOKYO_RADIO_STREAM_URL)) {
-            out = out.replaceFirst("\\{0}", "Content provided by gensokyoradio.net.\nThe GR logo is a trademark of Gensokyo Radio.\nGensokyo Radio is © LunarSpotlight.\n");
+            out = out.replaceFirst("\\{0}", "\u30b3\u30f3\u30c6\u30f3\u30c4\u306fgensokyoradio.net\u306b\u3088\u3063\u3066\u63d0\u4f9b\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n GR\u30ed\u30b4\u306fGensokyo Radio\u306e\u5546\u6a19\u3067\u3059\u3002\n \u8457\u4f5c\u6a29:\n Copyright (C) LunarSpotlight.\nGensokyo Bot JP Copyright (C) Cosgy Dev\n");
         } else {
             out = out.replaceFirst("\\{0}", "");
         }
