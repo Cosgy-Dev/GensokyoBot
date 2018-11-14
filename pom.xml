@@ -30,6 +30,12 @@
     <version>1.0</version>
     <artifactId>FredBoat-Root</artifactId>
     <packaging>pom</packaging>
+  
+    <dependency>
+    <groupId>io.sentry</groupId>
+    <artifactId>sentry</artifactId>
+    <version>1.7.10</version>
+    </dependency>
 
     <modules>
         <module>FredBoat</module>
